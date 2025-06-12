@@ -1,179 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SYRO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYRO Ads | Outdoor Advertising in Kolhapur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-    body {
-      font-family: 'Poppins', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
       overflow-x: hidden;
     }
+
     header {
-      background: linear-gradient(135deg, #000000, #222222);
+      background: linear-gradient(135deg, #000000, #333333);
       color: #fff;
-      padding: 3rem 2rem;
+      padding: 2rem;
       text-align: center;
-      animation: fadeInDown 1.5s ease;
+      animation: slideDown 1s ease-out;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #222;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-    header a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #ffb400;
-      color: #111;
-      font-weight: bold;
-      border-radius: 5px;
+
+    nav a {
+      color: #fff;
       text-decoration: none;
-      transition: background 0.3s;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
-    header a:hover {
-      background: #e69a00;
+
+    nav a:hover {
+      color: #ffb400;
     }
+
     section {
-      padding: 3rem 1.5rem;
-      max-width: 1000px;
+      padding: 3rem 2rem;
+      max-width: 1100px;
       margin: auto;
-      animation: fadeIn 1.5s ease;
+      animation: fadeInUp 1s ease;
     }
-    h2 {
-      color: #111;
-      font-size: 2rem;
+
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      position: relative;
+      color: #111;
     }
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: #ffb400;
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
     }
-    .services, .how-it-works {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .box {
+
+    .card {
       background: #fff;
-      padding: 1.5rem;
+      padding: 2rem;
+      margin: 1rem 0;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
     }
-    .box:hover {
+
+    .card:hover {
       transform: translateY(-5px);
     }
-    .contact {
+
+    footer {
       background: #111;
       color: #fff;
       text-align: center;
-      padding: 3rem 1.5rem;
-    }
-    .contact a {
-      color: #ffb400;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .contact a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
       padding: 1rem;
-      background: #222;
-      color: #bbb;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
+      margin-top: 4rem;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-    @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-30px); }
-      100% { opacity: 1; transform: translateY(0); }
+
+    input, textarea, button {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #ffb400;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #e0a800;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>SYRO</h1>
-    <p>Make Your Brand Unmissable</p>
-    <a href="#contact">Book a Billboard</a>
+    <h1>SYRO Ads</h1>
+    <p>Your Outdoor Advertising Partner in Kolhapur</p>
   </header>
 
-  <section id="about">
-    <h2>About SYRO</h2>
-    <p>SYRO is your local outdoor advertising partner. We help local businesses get seen with affordable and powerful billboard ads across high-traffic areas. Whether you're launching, expanding, or promoting — we make sure your message is seen.</p>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Grow Your Business with Billboard Advertising</h2>
+    <p>We provide high-visibility hoardings and advertising spaces in prime locations across Kolhapur.</p>
   </section>
 
   <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="box">
-        <h3>Billboard Rentals</h3>
-        <p>Get access to high-traffic billboard spaces around your city at affordable monthly rates.</p>
-      </div>
-      <div class="box">
-        <h3>Ad Design & Printing</h3>
-        <p>We design and print your ad banners with attention-grabbing visuals and messages.</p>
-      </div>
-      <div class="box">
-        <h3>Full Campaign Setup</h3>
-        <p>From choosing the space to installation, we manage your ad from concept to execution.</p>
-      </div>
+    <h3>Our Services</h3>
+    <div class="card">
+      <h4>Billboard Advertising</h4>
+      <p>Premium billboard spaces across the city for brand visibility and awareness.</p>
+    </div>
+    <div class="card">
+      <h4>Creative Ad Design</h4>
+      <p>Catchy and impactful billboard creatives made by our in-house designers.</p>
+    </div>
+    <div class="card">
+      <h4>Campaign Planning</h4>
+      <p>End-to-end planning and execution of your outdoor campaigns.</p>
     </div>
   </section>
 
-  <section id="how">
-    <h2>How It Works</h2>
-    <div class="how-it-works">
-      <div class="box"><strong>1.</strong> Choose Location</div>
-      <div class="box"><strong>2.</strong> We Design Your Ad</div>
-      <div class="box"><strong>3.</strong> We Print & Install</div>
-      <div class="box"><strong>4.</strong> Your Ad Goes Live</div>
+  <section id="about">
+    <h3>About SYRO Ads</h3>
+    <p>We're a Kolhapur-based advertising company focused on bringing maximum value to businesses through impactful outdoor campaigns. Whether you're a local shop or a national brand, our team helps you get seen.</p>
+  </section>
+
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <div class="card">
+      <form name="clientForm" onsubmit="saveClientData(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-  </section>
-
-  <section id="locations">
-    <h2>Our Locations</h2>
-    <p>We currently offer billboard space in the following high-traffic zones:</p>
-    <ul>
-      <li>Main Market Road – ₹4,999/mo</li>
-      <li>City Center Junction – ₹6,499/mo</li>
-      <li>Near Railway Station – ₹5,999/mo</li>
-      <li>Bus Stand Front Gate – ₹4,499/mo</li>
-    </ul>
-    <p>More locations coming soon!</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Ready to advertise or want more info?</p>
-    <p>📞 <a href="https://wa.me/919XXXXXXXXX" target="_blank">Message us on WhatsApp</a></p>
-    <p>📧 Email: hello@syroadvertising.com</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 SYRO Outdoor Ads. All rights reserved.</p>
+    <p>&copy; 2025 SYRO Ads. All Rights Reserved.</p>
   </footer>
+
+  <script>
+  async function saveClientData(event) {
+    event.preventDefault();
+    const form = event.target;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxkUfhaonFiBm_b0Vt_Jo9pSqkdfIdyP8uStn71q8ebSeudnajiJZ0ktTSn0rm9i4n1/exec'; // Replace with your actual script URL
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      if (response.ok) {
+        alert("Thank you! We have received your message.");
+        form.reset();
+      } else {
+        alert("Failed to submit. Please try again.");
+      }
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  }
+</script>
+
 </body>
+
 </html>
